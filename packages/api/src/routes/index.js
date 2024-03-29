@@ -13,5 +13,6 @@ router.use('/contracts', getProfile, contractRoutes);
 router.use('/admin', adminRoutes);
 router.use('/balances', balanceRoutes);
 router.use('/profiles', profileRoutes);
+router.use('/jobs', getProfile, jobRoutes);
 
 module.exports = router;
