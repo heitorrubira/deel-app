@@ -6,5 +6,5 @@ export function useGetProfiles(profileType: ProfileType = 'client') {
   return useAxios<Profile[]>({
     url: `${Config.apiUrl}/profiles`,
     params: { profileType }
-  });
+  }, { useCache: false });
 } 

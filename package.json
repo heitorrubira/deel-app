@@ -6,7 +6,7 @@
     "npmi:api": "cd packages/api && npm i",
     "npmi:web": "cd packages/web && npm i",
     "start:api": "cd packages/api && npm start",
-    "start:web": "cd packages/web && npm start",
+    "start:web": "cd packages/web && npm run dev",
     "seed": "cd packages/api && npm run seed"
   }
 }

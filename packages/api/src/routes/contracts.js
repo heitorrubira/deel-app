@@ -13,7 +13,7 @@ router.get('/:id', async (req, res) => {
     return res.status(400).json('Invalid id!');
   }
   const userProfile = req.profile;
-  const { Contract } = req.app.get('models');
+  const { Contract, Profile } = req.app.get('models');
 
   const result = await Contract.findOne({
     where: {
@@ -23,6 +23,13 @@ router.get('/:id', async (req, res) => {
         { ContractorId: userProfile.id },
       ],
     },
+    include: [{
+      model: Profile,
+      association: 'Client',
+    }, {
+      model: Profile,
+      association: 'Contractor',
+    }],
   });
 
   if (!result) {

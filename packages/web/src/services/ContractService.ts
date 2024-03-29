@@ -8,5 +8,5 @@ export function useGetContractById(profileId: number, contractId: number) {
     headers: {
       profile_id: profileId,
     },
-  });
+  }, { useCache: false });
 } 

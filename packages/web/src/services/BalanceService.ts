@@ -7,6 +7,7 @@ export function useAddBalance(userId: number) {
     method: 'POST',
     url: `${Config.apiUrl}/balances/deposit/${userId}`,
   }, {
-    manual: true
+    manual: true,
+    useCache: false,
   });
 } 

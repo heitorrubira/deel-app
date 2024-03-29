@@ -8,7 +8,7 @@ export function useGetJobsUnpaid(profileId: number) {
     headers: {
       profile_id: profileId,
     },
-  });
+  }, { useCache: false });
 } 
 
 export function usePayJob(profileId: number, jobId: number) {
@@ -19,6 +19,7 @@ export function usePayJob(profileId: number, jobId: number) {
       profile_id: profileId,
     },
   }, {
-    manual: true
+    manual: true,
+    useCache: false,
   }); 
 }
