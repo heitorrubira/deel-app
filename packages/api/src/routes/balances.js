@@ -38,7 +38,7 @@ router.post('/deposit/:userId', async (req, res) => {
         reuired: true,
         where: {
           ClientId: userId,
-          status: { [Sequelize.Op.ne]: Contract.TERMINATED_STATUS },
+          status: { [Sequelize.Op.eq]: Contract.IN_PROGRESS_STATUS },
         },
       }],
       where: {

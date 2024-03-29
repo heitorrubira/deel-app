@@ -5,6 +5,7 @@ const contractRoutes = require('./contracts');
 const adminRoutes = require('./admin');
 const balanceRoutes = require('./balances');
 const profileRoutes = require('./profiles');
+const jobRoutes = require('./jobs');
 
 const router = new Router();
 
