@@ -2,22 +2,29 @@
   "name": "deel-task",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "body-parser": "^1.19.0",
-    "express": "4.17.1",
-    "sequelize": "^6.3.4",
-    "sqlite3": "^4.0.1"
-  },
   "scripts": {
     "start": "nodemon ./src/server.js",
-    "seed": "node ./scripts/seedDb.js"
+    "seed": "node ./scripts/seedDb.js",
+    "lint": "eslint ./src/* ./scripts/*",
+    "prettier": "prettier . --write"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "luxon": "^3.4.4",
+    "sequelize": "^6.37.1",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "concurrently": "4.1.0",
-    "nodemon": "1.19.1"
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-plugin-jest": "^27.9.0",
+    "nodemon": "^3.1.0",
+    "prettier": "^3.2.5"
   },
   "engines": {
-    "node": ">=10.16.3"
+    "node": ">=18"
   },
   "engineStrict": true
 }
