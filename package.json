@@ -1,0 +1,12 @@
+{
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "npmi:api": "cd packages/api && npm i",
+    "npmi:web": "cd packages/web && npm i",
+    "start:api": "cd packages/api && npm start",
+    "start:web": "cd packages/web && npm start",
+    "seed": "cd packages/api && npm run seed"
+  }
+}
