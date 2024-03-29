@@ -4,11 +4,13 @@ const { getProfile } = require('../middleware');
 const contractRoutes = require('./contracts');
 const adminRoutes = require('./admin');
 const balanceRoutes = require('./balances');
+const profileRoutes = require('./profiles');
 
 const router = new Router();
 
 router.use('/contracts', getProfile, contractRoutes);
 router.use('/admin', adminRoutes);
 router.use('/balances', balanceRoutes);
+router.use('/profiles', profileRoutes);
 
 module.exports = router;
